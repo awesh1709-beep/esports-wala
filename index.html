@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="hi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>eSports Wala — Free Fire</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#080b12;color:#fff}a{text-decoration:none;color:inherit}
+nav{position:sticky;top:0;background:#0d111b;border-bottom:1px solid #252d3b;padding:15px 5%;display:flex;justify-content:space-between}.logo{font-size:24px;font-weight:800}.logo b{color:#ff9f1c}
+nav div:last-child{display:flex;gap:18px;font-size:14px}.hero{padding:80px 5%;background:linear-gradient(135deg,#111827,#1d1024)}
+h1{font-size:clamp(40px,8vw,72px);margin:0}.hero h1 b{color:#ff9f1c}.hero p{max-width:650px;color:#b9c1ce;font-size:18px;line-height:1.6}
+section{max-width:1100px;margin:auto;padding:55px 5%}.title{font-size:32px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.card,.form{background:#111722;border:1px solid #283244;border-radius:16px;padding:20px}.tag{color:#ffb13b;background:#2b2112;padding:6px 9px;border-radius:7px;font-size:12px;font-weight:bold}
+.muted{color:#a5afbd;line-height:1.6}.btn{display:inline-block;background:#ff9f1c;color:#111;border:0;border-radius:9px;padding:13px 18px;font-weight:bold;cursor:pointer;margin-top:10px}
+input,select{width:100%;padding:13px;margin:7px 0 13px;background:#0b0f17;color:#fff;border:1px solid #30394a;border-radius:9px}label{font-size:14px;color:#cbd2dc}
+.notice{margin-top:12px;padding:12px;background:#171e2a;border-radius:9px;color:#aeb7c5;font-size:13px}footer{text-align:center;padding:30px;border-top:1px solid #252d3b;color:#8993a3}
+@media(max-width:650px){nav div:last-child{display:none}}
+</style></head><body>
+<nav><div class="logo">eSports <b>Wala</b></div><div><a href="#tournaments">Tournaments</a> <a href="#register">Register</a> <a href="#rules">Rules</a></div></nav>
+<header class="hero"><h1>Free Fire <b>Esports</b><br>For Everyone.</h1><p>eSports Wala par Free Fire tournaments dekho, team register karo aur competitive matches mein participate karo.</p><a class="btn" href="#tournaments">View Tournaments</a></header>
+<section id="tournaments"><h2 class="title">Upcoming Tournaments</h2><div class="grid">
+<div class="card"><span class="tag">OPEN</span><h3>Clash Cup</h3><p class="muted">Squad • Entry ₹20 • Prize ₹1,000<br>Sunday • 8:00 PM</p><a class="btn" href="#register">Register Team</a></div>
+<div class="card"><span class="tag">OPEN</span><h3>Battle Night</h3><p class="muted">Squad • Entry ₹30 • Prize ₹2,000<br>Saturday • 9:00 PM</p><a class="btn" href="#register">Register Team</a></div>
+<div class="card"><span class="tag">COMING SOON</span><h3>Grand Championship</h3><p class="muted">Registration will open soon.</p></div>
+</div></section>
+<section id="register"><h2 class="title">Team Registration</h2><form class="form" onsubmit="reg(event)">
+<label>Team Name</label><input id="team" required>
+<label>Captain Name</label><input id="captain" required>
+<label>WhatsApp Number</label><input id="phone" required inputmode="numeric">
+<label>Tournament</label><select id="tour"><option>Clash Cup</option><option>Battle Night</option></select>
+<button class="btn" type="submit">Send Registration</button><div class="notice">Submit karne par WhatsApp message ready hoga.</div></form></section>
+<section id="rules"><h2 class="title">Rules</h2><div class="grid">
+<div class="card"><h3>Fair Play</h3><p class="muted">Hacks, cheats aur unfair tools allowed nahi hain.</p></div>
+<div class="card"><h3>Correct Details</h3><p class="muted">Registration mein sahi team aur captain details dein.</p></div>
+<div class="card"><h3>Match Time</h3><p class="muted">Announced time se pehle ready rahen.</p></div></div></section>
+<footer>© 2026 eSports Wala • Free Fire Tournament Platform</footer>
+<script>
+function reg(e){e.preventDefault();let m=`eSports Wala Registration%0ATeam: ${encodeURIComponent(team.value)}%0ACaptain: ${encodeURIComponent(captain.value)}%0AWhatsApp: ${encodeURIComponent(phone.value)}%0ATournament: ${encodeURIComponent(tour.value)}`;window.open("https://wa.me/919999999999?text="+m,"_blank")}
+</script></body></html>
